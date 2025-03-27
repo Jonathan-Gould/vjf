@@ -35,7 +35,7 @@ class GLMDecoder(Decoder):
         self.linear.bias.requires_grad = config["b"][1]
 
         if self.linear.weight.requires_grad and "gnorm" in config:
-            self.normed_linear = nn.utils.weight_norm(self.linear, dim=config["gnorm"])
+            self.normed_linear = nn.utils.parameterizations.weight_norm(self.linear, dim=config["gnorm"])
         else:
             self.normed_linear = self.linear
 
