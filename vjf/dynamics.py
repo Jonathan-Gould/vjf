@@ -10,9 +10,9 @@ from torch.nn import Parameter
 
 from .base import Noise
 from .base import Component
-from .gp.covfun import SquaredExponential
+# from .gp.covfun import SquaredExponential
 from .module import RBFN, IGRU
-from .gp import SGP
+# from .gp import SGP
 
 
 class GaussianNoise(Noise):
